@@ -1,11 +1,11 @@
 version: "3.7"
 services:
   #Laravel app
-  app:
+  appblog:
     build:
       args:
-        user: sammy
-        uid: 1000
+        user: mt
+        uid: 501
       context: ./
       dockerfile: Dockerfile
     image: blog
@@ -16,7 +16,7 @@ services:
       - ./:/var/www
     networks:
       - blog
-  nginx:
+  nginxblog:
     image: nginx:1.17-alpine
     container_name: blog-nginx
     restart: unless-stopped
@@ -27,7 +27,7 @@ services:
       - ./docker-compose/nginx:/etc/nginx/conf.d
     networks:
       - blog
-  db:
+  dbblog:
     image: mysql:5.7
     container_name: blog-db
     restart: unless-stopped
