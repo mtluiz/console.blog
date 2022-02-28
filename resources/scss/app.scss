@@ -1,0 +1,11 @@
+@import 'reset';
+@import 'variables';
+@import 'fonts';
+@import 'pages/home';
+@import 'pages/login';
+@import 'components/header';
+
+body{
+    background-color: $black;
+}
+
