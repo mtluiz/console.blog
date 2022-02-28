@@ -1,0 +1,84 @@
+.blog-header{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'IBM Plex Mono';
+    margin-bottom: 4vw;
+    &__title{
+        display: flex;
+
+        img{
+            width: 300px;
+        }
+
+        div{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-left: 60px;
+            h1{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                font-size: 80px;
+                color: #fff;
+            }
+            h4{
+                font-size: 25px;
+                color: #788ea2;
+            }
+        }
+    }
+
+    &__menu{
+        color: #fff;
+
+        li{
+            font-size: 16px;
+            &:hover{
+                background-color: #fff;
+                color: $black;
+                cursor: pointer;
+            }
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        &__title{
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            img{
+                width: 150px;
+            }
+
+            div{
+                margin: 20px 0;
+                h1{
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 8vmin;
+                }
+                h4{
+                    margin-top: 20px;
+                    font-size: 4vmin;
+                }
+            }
+        }
+        &__menu{
+            display: none;
+        }
+    }
+
+    &__logged{
+        position: absolute;
+        top: 0;
+        right: 50px;
+        color: #fff;
+        background-color: rgb(155, 9, 9);
+    }
+}
+
+.blog-container{
+    padding: 4vw;
+}

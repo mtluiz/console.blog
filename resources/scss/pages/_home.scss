@@ -1,0 +1,53 @@
+.table-home {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    padding: 10px;
+    font-family: "IBM Plex Mono";
+    width: 100%;
+    height: 250px;
+    cursor: pointer;
+    div {
+        border: 1px solid #fff;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        &:hover {
+            background-color: #fff;
+            > h3 {
+                color: black !important;
+            }
+        }
+
+        header {
+            width: 100%;
+            p:nth-child(1) {
+                font-weight: 700;
+            }
+
+            p:nth-child(2) {
+                color: #6796c2;
+                font-size: 12px;
+                margin-top: 8px;
+                font-weight: 100;
+            }
+        }
+
+        h3 {
+            color: #fff;
+            margin-top: 40%;
+            text-align: center;
+        }
+    }
+}
+
+.CSS {
+    color: rgb(211, 90, 9);
+}
+
+.JS {
+    color: rgb(235, 180, 0);
+}
+
+.HTML {
+    color: rgb(0, 50, 214);
+}
