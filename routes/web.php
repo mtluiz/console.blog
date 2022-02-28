@@ -13,10 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
-    return view('welcome');
+    $posts = DB::select('SELECT * FROM posts');
+    return view('welcome')->with('posts', $posts);
 });
 
 Auth::routes();
-
+Route::resource('posts', 'App\Http\Controllers\PostsController');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
