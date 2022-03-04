@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('title');
             $table->mediumText('body');
             $table->string('cover_image');
+            $table->integer('user_id');
+            $table->string('tag');
             $table->timestamps();
         });
     }
