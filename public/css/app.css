@@ -1,1 +1,267 @@
+@import url(https://fonts.googleapis.com/css2?family=IBM+Plex+Mono);
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
 
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.table-home {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
+  padding: 10px;
+  font-family: "IBM Plex Mono";
+  width: 100%;
+  height: 250px;
+  cursor: pointer;
+}
+.table-home div {
+  border: 1px solid #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.table-home div:hover {
+  background-color: #fff;
+}
+.table-home div:hover > h3 {
+  color: black !important;
+}
+.table-home div header {
+  width: 100%;
+}
+.table-home div header p:nth-child(1) {
+  font-weight: 700;
+}
+.table-home div header p:nth-child(2) {
+  color: #6796c2;
+  font-size: 12px;
+  margin-top: 8px;
+  font-weight: 100;
+}
+.table-home div h3 {
+  color: #fff;
+  margin-top: 40%;
+  text-align: center;
+}
+
+.CSS {
+  color: #d35a09;
+}
+
+.JS {
+  color: #ebb400;
+}
+
+.HTML {
+  color: #0032d6;
+}
+
+.login-form {
+  font-family: "IBM Plex Mono";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login-form div {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 10px 0;
+}
+.login-form div label {
+  color: #e7e9ed;
+  margin-bottom: 5px;
+}
+.login-form div input {
+  background-color: #e7e9ed;
+  border: none;
+  font-size: 20px;
+  padding: 10px;
+  width: 280px;
+  font-family: "IBM Plex Mono", monospace !important;
+}
+.login-form div input:focus {
+  outline: none;
+  transition: transform 0.15s ease;
+  transform: scale(1.1);
+}
+.login-form .remember {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.login-form .remember input {
+  width: 20px;
+}
+.login-form .remember label {
+  margin-bottom: 0;
+}
+.login-form .remember input[type=checkbox] {
+  /* change "blue" browser chrome to yellow */
+  filter: hue-rotate(175deg);
+}
+.login-form .button-login {
+  width: 300px;
+  height: 50px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 18px;
+  background-color: #af1212;
+  color: white;
+  border: none;
+}
+.login-form .button-login:hover {
+  background-color: white;
+  color: #af1212;
+}
+.login-form .forgot-password {
+  color: white;
+  font-weight: 500;
+}
+.login-form .forgot-password:hover {
+  background-color: white;
+  color: #252728;
+}
+
+.title {
+  font-size: 5vmin;
+  font-family: "IBM Plex Mono";
+  color: white;
+  text-align: center;
+  margin: 14px 0;
+}
+
+.blog-header {
+  display: flex;
+  justify-content: space-between;
+  font-family: "IBM Plex Mono";
+  margin-bottom: 4vw;
+}
+.blog-header__title {
+  display: flex;
+}
+.blog-header__title img {
+  width: 300px;
+}
+.blog-header__title div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 60px;
+}
+.blog-header__title div h1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: 80px;
+  color: #fff;
+}
+.blog-header__title div h4 {
+  font-size: 22px;
+  color: #8facc7;
+}
+.blog-header__menu {
+  color: #fff;
+}
+.blog-header__menu li {
+  font-size: 16px;
+}
+.blog-header__menu li:hover {
+  background-color: #fff;
+  color: #252728;
+  cursor: pointer;
+}
+@media screen and (max-width: 900px) {
+  .blog-header__title {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .blog-header__title img {
+    width: 150px;
+  }
+  .blog-header__title div {
+    margin: 20px 0;
+  }
+  .blog-header__title div h1 {
+    justify-content: center;
+    align-items: center;
+    font-size: 8vmin;
+  }
+  .blog-header__title div h4 {
+    margin-top: 20px;
+    font-size: 4vmin;
+  }
+  .blog-header__menu {
+    display: none;
+  }
+}
+.blog-header__logged {
+  position: absolute;
+  top: 0;
+  right: 50px;
+  color: #fff;
+  background-color: #9b0909;
+}
+
+.blog-container {
+  padding: 4vw;
+}
+
+body {
+  background-color: #252728;
+}
