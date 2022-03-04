@@ -17,15 +17,62 @@
         input{
             background-color: $white;
             border: none;
-            font-size: 25px;
+            font-size: 20px;
+            padding: 10px;
+            width: 280px;
+            font-family: "IBM Plex Mono", monospace !important;
+            &:focus {
+                outline: none;
+                transition: transform .15s ease;
+                transform: scale(1.1);
+              }
+        }
+    }
+
+    .remember{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        input{
+            width: 20px;
+        }
+        label{
+            margin-bottom: 0;
+        }
+
+        input[type="checkbox"] { /* change "blue" browser chrome to yellow */
+            filter: hue-rotate(175deg);
+          }
+    }
+
+    .button-login{
+        width: 300px;
+        height: 50px;
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 18px;
+        background-color: rgb(175, 18, 18);
+        color: white;
+        border: none;
+        &:hover{
+            background-color: white;
+            color:rgb(175, 18, 18) ;
+        }
+    }
+
+    .forgot-password{
+        color: white;
+        font-weight: 500;
+        &:hover{
+            background-color: white;
+            color: $black;
         }
     }
 }
 
 .title{
-    font-size: 6vmin;
+    font-size: 5vmin;
     font-family: 'IBM Plex Mono';
     color: white;
     text-align: center;
-    margin: 20px 0;
+    margin: 14px 0;
 }
