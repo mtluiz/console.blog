@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Post;
+use Illuminate\Support\Str;
 use DB;
 
 class PostsController extends Controller
@@ -59,9 +60,11 @@ class PostsController extends Controller
 
         //create post
         $post = new Post;
+        $post->id = Str::uuid();
         $post->title = $request->input('title');
         $post->body = $request->input('body');
         $post->user_id = auth()->user()->id;
+        $post->tag = $request->input('tag');
         $post->cover_image = $fileNameToStore;
         $post->save();
 
