@@ -3,7 +3,6 @@
 @section('content')
     <h1 class="title">{{ __('Login') }}</h1>
 
-
     <form method="POST" class="login-form" action="{{ route('login') }}">
         @csrf
 
@@ -19,7 +18,7 @@
         </div>
 
         <div>
-            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
+            <label for="password">{{ __('Password') }}</label>
             <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password"
                 required autocomplete="current-password">
             @error('password')
@@ -29,7 +28,7 @@
             @enderror
         </div>
 
-        <div>
+        <div class="remember">
             <input class="form-check-input" type="checkbox" name="remember" id="remember"
                 {{ old('remember') ? 'checked' : '' }}>
             <label class="form-check-label" for="remember">
@@ -37,13 +36,13 @@
             </label>
         </div>
 
-        <button type="submit" class="button">
+        <button type="submit" class="button-login">
             {{ __('Login') }}
         </button>
 
-        <div>
+        <div class="forgot-password">
             @if (Route::has('password.request'))
-                <a class="btn btn-link" href="{{ route('password.request') }}">
+                <a href="{{ route('password.request') }}">
                     {{ __('Forgot Your Password?') }}
                 </a>
             @endif

@@ -9,7 +9,8 @@
                 <a href="/posts/{{ $post->id }}">
                     <h3>{{ $post->title }}</h3>
                 </a>
-                <small>Escrito em {{ $post->created_at }} por $post->user->name</small>
+                <small>Escrito em {{ $post->created_at }} por {{$post->user->name}}</small>
+                <h1>teste</h1>
             </div>
         @endforeach
         {{ $posts->links() }}

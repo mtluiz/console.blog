@@ -1,7 +1,7 @@
 <header class="blog-header">
 
     <div class="blog-header__title">
-        <img src="https://pbs.twimg.com/profile_images/1163911054788833282/AcA2LnWL_400x400.jpg" alt="">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png" alt="">
         <div>
             <h1>console <br> <strong>.blog()</strong></h1>
             <h4>The web development blog made for you.</h4>

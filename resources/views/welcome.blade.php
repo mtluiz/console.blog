@@ -2,26 +2,21 @@
 
 @section('content')
     <main>
-        @if (!$posts)
-            <h1></h1>
+        @if (!count($posts) > 0)
+            <h1 class="title"> Desculpa, nenhum post foi encontrado :(</h1>
         @else
-            <section>
-                <div>
-                    <p>CSS</p>
-                    <h1>Automatizing Links</h1>
-                </div>
-            </section>
-        @endif
-
         <section class="table-home">
+            @foreach ($posts as $post)
             <div class="table-home__card">
                 <header>
-                    <p class="CSS">CSS</p>
-                    <p>August, 18 by Matheus Luiz</p>
+                    <p class="{{ $post->tag }}">{{ $post->tag }}</p>
+                    <p>{{ $post->created_at->format('d/m/Y') }} by {{ $post->user->name }}</p>
                 </header>
 
-                <h3>Animating Link Underlines</h3>
+                <h3>{{ $post->title }}</h3>
             </div>
+            @endforeach
         </section>
+        @endif
     </main>
 @endsection

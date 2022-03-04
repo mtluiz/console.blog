@@ -4,7 +4,7 @@
     <a href="/posts" class="button"> Retornar </a>
 
     <h1>{{ $post->title }}</h1>
-    <small>Escrito em {{ $post->created_at }} por {{$post->user->name}}</small>
+    <small>Escrito em {{ $post->created_at }} por {{ $post->user_id}}</small>
 
     <div>
         {!! $post->body !!}
