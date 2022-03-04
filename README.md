@@ -36,6 +36,7 @@ This project utilizes all the tools avaiable on Laravel 9. It has a complete aut
 * [Laravel](https://laravel.com/)
 * [CKEditor](https://ckeditor.com/)
 * [JQuery](https://jquery.com)
+* [PHP 8.0](https://www.php.net/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
