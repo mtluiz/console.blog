@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Post;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', function () {
-    $posts = DB::select('SELECT * FROM posts');
-    return view('welcome')->with('posts', $posts);
+ Route::get('/', function () {
+     $posts = Post::all();
+     return view('welcome')->with('posts', $posts);
 });
 
 Auth::routes();
