@@ -4,7 +4,7 @@ services:
   appblog:
     build:
       args:
-        user: mt
+        user: me
         uid: 501
       context: ./
       dockerfile: Dockerfile
