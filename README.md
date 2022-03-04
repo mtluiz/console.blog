@@ -91,7 +91,7 @@ Then just run:
    docker-compose up -d
    ```
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+_For more examples, please refer to the [Documentation](https://docs.docker.com/compose/)_
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
